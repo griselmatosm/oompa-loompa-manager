@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Oompa Loompa Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web desarrollada con **React**, **TypeScript**, **Vite**, **Redux Toolkit**, **SWR**, y **React Router**, diseñada para gestionar la tripulación de Oompa Loompas en la fábrica de chocolate de Willy Wonka.
 
-Currently, two official plugins are available:
+## Instalación
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clona el repositorio:
 
-## Expanding the ESLint configuration
+   ```bash
+   git https://github.com/griselmatosm/oompa-loompa-manager
+   cd oompa-loompa-manager
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Ejecución
+
+Para iniciar la aplicación en modo de desarrollo:
+
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+La aplicación estará disponible en http://localhost:5173/
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Decisiones técnicas
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+# Arquitectura de carpetas
+
+Opté por una estructura de carpetas por tipos de archivos debido a que el proyecto es pequeño y de alcance limitado, facilitando la navegación y el desarrollo. Esta estructura agrupa componentes, páginas, hooks, etc., en carpetas separadas, lo que simplifica la organización.
+
+# Estructura de Rutas
+
+- Home: La ruta para la página de inicio es path: '/', siguiendo la convención estándar y asegurando que la página principal se cargue al visitar la raíz del sitio.
+
+- Detalle de Oompa Loompa: Opté por path: 'oompa/:id' para la página de detalles, asegurando que la URL sea descriptiva y preparada para futuras expansiones del proyecto.
+
+## Mejoras Futuras
+
+- Considerar la transición a Screaming Architecture si el proyecto crece en complejidad.
