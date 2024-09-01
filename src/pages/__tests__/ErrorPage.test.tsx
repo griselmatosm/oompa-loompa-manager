@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { describe, expect, test } from 'vitest';
+import { renderWithProviders } from '../../utils/testUtils';
 
 import Root from '../../routes/root';
 import ErrorPage from '../ErrorPage';
@@ -17,7 +18,7 @@ describe('ErrorPage', () => {
       initialEntries: ['/invalid-path'],
     });
 
-    render(<RouterProvider router={router} />);
+    renderWithProviders(<RouterProvider router={router} />);
 
     expect(screen.getByText('Oops!')).toBeInTheDocument();
     expect(screen.getByText(/an unexpected error has occurred/i)).toBeInTheDocument();

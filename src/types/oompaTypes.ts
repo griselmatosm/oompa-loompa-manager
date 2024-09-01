@@ -1,7 +1,13 @@
-export interface OompaList {
+export interface OompaListPage {
   current: number;
   total: number;
   results: OompaWorker[];
+}
+
+export interface OompaList {
+  current_page: number;
+  oompa_list: OompaWorker[];
+  total_pages: number;
 }
 
 export interface OompaWorker {

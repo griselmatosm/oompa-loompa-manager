@@ -41,7 +41,31 @@ Opté por una estructura de carpetas por tipos de archivos debido a que el proye
 
 ### Componentes
 
-En esta prueba técnica, opté por crear componentes específicos para la lista de Oompas y la tarjeta de detalle, priorizando la entrega de una solución completa dentro del tiempo asignado. En un proyecto a mayor escala, podría considerar la abstracción de componentes de UI genéricos (como `Card` o `List`) para mejorar la reutilización y la mantenibilidad del código.
+En esta prueba técnica, opté por crear componentes específicos para la lista de Oompas (`OompaList`) y la tarjeta de detalle (`OompaDetail`). Estos componentes contienen tanto la lógica de negocio como la presentación, priorizando la entrega de una solución completa y funcional dentro del tiempo asignado.
+
+#### OompaList
+
+El componente OompaList maneja toda la lógica relacionada con la carga, paginación y renderización de la lista de Oompas. Decidí mantener esta lógica dentro de OompaList por las siguientes razones:
+
+1. **Simplicidad:** Dado que esta aplicación tiene una única lista de Oompas y no se anticipa la necesidad de reutilizar esta lógica en otros contextos, mantener la lógica en `OompaList` permite una implementación más directa y sencilla, evitando la sobreingeniería.
+
+2. **Mantenibilidad:** Al agrupar toda la funcionalidad relacionada en un solo componente, se facilita la gestión y futuras modificaciones del código. Cualquier cambio en la lógica de la lista puede realizarse dentro de `OompaList`, sin afectar otros componentes.
+
+3. **Posible Refactorización:** Aunque la lógica actualmente reside en `OompaList`, en un proyecto a mayor escala podría considerar la abstracción de esta lógica en componentes de UI más genéricos (como List o Card). Esto mejoraría la reusabilidad y la mantenibilidad del código si se anticipa la necesidad de reutilizar estos patrones en otras partes de la aplicación.
+
+#### OompaDetail
+
+El componente `OompaDetail` es responsable de mostrar la información detallada de un Oompa Loompa específico. De manera similar a OompaList, se decidió mantener la lógica y la presentación en un solo componente para facilitar el desarrollo y asegurar la entrega dentro del tiempo asignado.
+
+### Elección de SWR para Fetching y Paginación
+
+Decidí utilizar **SWR** para manejar el fetching y la paginación de datos en esta aplicación debido a varias razones:
+
+- **Simplicidad**: SWR ofrece una API sencilla y fácil de usar que reduce la cantidad de código necesario para gestionar la obtención de datos.
+- **Paginación Incorporada**: La funcionalidad de paginación proporcionada por `useSWRInfinite` me permitió implementar un scroll infinito de manera eficiente, cumpliendo con uno de los requerimientos clave de la prueba.
+- **Optimización del Rendimiento**: SWR maneja el caching y el refetching en segundo plano, lo que mejora la experiencia del usuario y la eficiencia de la aplicación.
+
+Este enfoque me permitió concentrarme en la lógica de la aplicación mientras aprovechaba las potentes características de SWR para gestionar el estado de los datos.
 
 ## Mejoras Futuras
 
