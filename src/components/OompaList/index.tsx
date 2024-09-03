@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useAppSelector } from '../../hooks/store';
 import { useOompaList } from '../../hooks/useOompaList';
 import { GenderLabel, OompaWorker } from '../../types/oompaTypes';
@@ -28,12 +29,14 @@ export default function OompaList() {
       <ul className={styles.oompaList}>
         {filteredOompaList.map((oompa) => (
           <li key={oompa.id}>
-            <OompaCard
-              name={`${oompa.first_name} ${oompa.last_name}`}
-              image={oompa.image}
-              gender={GenderLabel[oompa.gender]}
-              profession={oompa.profession}
-            />
+            <Link to={`/oompa/${oompa.id}`}>
+              <OompaCard
+                name={`${oompa.first_name} ${oompa.last_name}`}
+                image={oompa.image}
+                gender={GenderLabel[oompa.gender]}
+                profession={oompa.profession}
+              />
+            </Link>
           </li>
         ))}
       </ul>

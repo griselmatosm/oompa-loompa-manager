@@ -27,7 +27,10 @@ ul {
   margin: 0;
 }
 
-
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 
 button {
   border-radius: 8px;
