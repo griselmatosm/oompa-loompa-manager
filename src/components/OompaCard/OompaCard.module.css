@@ -1,0 +1,27 @@
+.oompaCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.oompaCard img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.oompaCard h2 {
+  font-size: 20px;
+}
+
+.oompaCard p {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+.oompaCard:hover {
+  cursor: pointer;
+
+  h2 {
+    color: #20b4d6
+  }
+}
