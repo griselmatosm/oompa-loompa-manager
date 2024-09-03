@@ -5,6 +5,18 @@
 
 .oompaCard img {
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.oompaCard h2 {
+  font-size: 20px;
+}
+
+.oompaCard p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  font-style: italic;
 }
 
 .oompaCard:hover {
