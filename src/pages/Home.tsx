@@ -1,9 +1,9 @@
-import HeaderContainer from '../components/HeaderContainer'
+import HeadingContainer from '../components/HeadingContainer'
 import OompaList from '../components/OompaList'
 export default function Home() {
   return (
     <>
-      <HeaderContainer />
+      <HeadingContainer />
       <section style={{ marginTop: '2rem' }}>
         <OompaList />
       </section>

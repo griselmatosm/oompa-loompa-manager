@@ -1,0 +1,22 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 70px;
+  background-color: #ccc;
+}
+
+.headerNav h1 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.headerNav img {
+  width: 30px;
+}

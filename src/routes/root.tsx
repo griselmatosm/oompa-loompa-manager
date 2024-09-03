@@ -1,12 +1,11 @@
 import { Outlet } from 'react-router-dom';
+import Header from '../components/Header';
 import styles from './root.module.css';
 
 export default function Root() {
   return (
     <>
-      <header>
-        <h1>Oompa Loompa's Crew</h1>
-      </header>
+      <Header />
       <main className={styles.mainLayout}>
         <Outlet />
       </main>
