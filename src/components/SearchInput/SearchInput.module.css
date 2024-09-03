@@ -1,0 +1,40 @@
+.searchInputContainer {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  align-self: flex-end;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #20b4d6;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.searchIconContainer::before {
+  content: "";
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #ccc;
+  height: 60%;
+  margin: auto 0;
+}

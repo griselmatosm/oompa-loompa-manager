@@ -1,9 +1,12 @@
+import HeaderContainer from '../components/HeaderContainer'
 import OompaList from '../components/OompaList'
 export default function Home() {
   return (
     <>
-      <h1>Find your Oompa Loompa</h1>
-      <OompaList />
+      <HeaderContainer />
+      <section style={{ marginTop: '2rem' }}>
+        <OompaList />
+      </section>
     </>
   )
 }

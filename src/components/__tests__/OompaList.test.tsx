@@ -12,7 +12,7 @@ describe('OompaList', () => {
     renderWithProviders(<OompaList />);
 
     expect(screen.getByText('Loading...')).toBeInTheDocument();
-    expect(await screen.findByText('John')).toBeInTheDocument();
+    expect(await screen.findByText(/John/i)).toBeInTheDocument();
   })
 
   it('should render the next page of Oompa Loompas', async () => {
@@ -21,6 +21,6 @@ describe('OompaList', () => {
 
     await waitFor(() => screen.getByText('Loading...'));
 
-    expect(await screen.findByText('Jane')).toBeInTheDocument();
+    expect(await screen.findByText(/Jane/i)).toBeInTheDocument();
   })
 })

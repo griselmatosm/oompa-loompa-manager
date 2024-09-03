@@ -1,0 +1,16 @@
+.oompaCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.oompaCard img {
+  width: 100%;
+}
+
+.oompaCard:hover {
+  cursor: pointer;
+
+  h2 {
+    color: #20b4d6
+  }
+}

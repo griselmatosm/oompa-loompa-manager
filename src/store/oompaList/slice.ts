@@ -5,13 +5,16 @@ interface OompaListFetchingDate {
   fetching_date: string
 }
 
-interface OompaListState extends OompaList, OompaListFetchingDate {}
+interface OompaListState extends OompaList, OompaListFetchingDate {
+  filterTerm: string
+}
 
 const initialState: OompaListState = {
   current_page: 1,
   total_pages: 0,
   oompa_list: [],
   fetching_date: '',
+  filterTerm: '',
 };
 
 export const oompaListSlice = createSlice({
@@ -26,9 +29,12 @@ export const oompaListSlice = createSlice({
     setFetchingDate: (state, action: PayloadAction<string>) => {
       state.fetching_date = action.payload;
     },
+    setFilterTerm: (state, action: PayloadAction<string>) => {
+      state.filterTerm = action.payload;
+    },
   },
 });
 
 export default oompaListSlice.reducer;
 
-export const { setOompaList, setFetchingDate } = oompaListSlice.actions;
+export const { setOompaList, setFetchingDate, setFilterTerm } = oompaListSlice.actions;

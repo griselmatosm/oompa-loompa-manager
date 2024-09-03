@@ -49,3 +49,10 @@ export enum Gender {
   F = 'F',
   M = 'M',
 }
+
+export const GenderLabel = {
+  [Gender.F]: 'Female',
+  [Gender.M]: 'Male',
+};
+
+
