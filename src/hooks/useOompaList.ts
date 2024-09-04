@@ -1,13 +1,13 @@
 import { useEffect, useMemo } from 'react';
 import useSWRInfinite from 'swr/infinite';
 import { useOompaListActions } from '../hooks/useOompaListActions';
-import { fetcher, getKey } from '../services/getOompaList';
+import { fetcher, getOompaListKey } from '../services';
 import { OompaListPage } from '../types/oompaTypes';
 
 export const useOompaList = () => {
   const { setOompaListAction, setFetchingDateAction } = useOompaListActions();
   const { data, error, isValidating, isLoading, size, setSize } =
-    useSWRInfinite<OompaListPage>(getKey, fetcher, {
+    useSWRInfinite<OompaListPage>(getOompaListKey, fetcher, {
       revalidateOnFocus: false,
     });
   const oompaList = useMemo(() => data?.flatMap((page) => page.results) || [], [data]);

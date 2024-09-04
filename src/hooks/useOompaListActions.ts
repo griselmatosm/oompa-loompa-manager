@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { useAppDispatch } from '../hooks/store';
-import { setFetchingDate, setFilterTerm, setOompaList } from '../store/oompaList/slice';
+import { setFetchingDate, setFilterTerm, setOompaList } from '../store/oompaListSlice';
 import { OompaList } from '../types/oompaTypes';
 export const useOompaListActions = () => {
   const dispatch = useAppDispatch();

@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react'
 import { createMemoryRouter, RouterProvider } from 'react-router-dom'
-import { describe, expect, test } from 'vitest'
+import { describe, test } from 'vitest'
+import { renderWithProviders } from '../../utils/testUtils'
+
 import Root from '../../routes/root'
 import OompaDetail from '../OompaDetail'
 
@@ -21,7 +22,7 @@ describe('OompaDetail', () => {
       { initialEntries: ['/oompa/1'] }
     )
 
-    render(<RouterProvider router={router} />)
+    renderWithProviders(<RouterProvider router={router} />)
 
   })
 })

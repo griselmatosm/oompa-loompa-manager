@@ -3,7 +3,7 @@ import { useAppSelector } from '../../hooks/store';
 import { useOompaList } from '../../hooks/useOompaList';
 import { GenderLabel, OompaWorker } from '../../types/oompaTypes';
 import { matchesFilterTerm } from '../../utils/helpers';
-import OompaCard from '../OompaCard/OompaCard';
+import OompaCard from '../OompaCard';
 import styles from './OompaList.module.css';
 
 export default function OompaList() {

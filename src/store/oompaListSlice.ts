@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { OompaList } from '../../types/oompaTypes';
+import { OompaList } from '../types/oompaTypes';
 
 interface OompaListFetchingDate {
   fetching_date: string

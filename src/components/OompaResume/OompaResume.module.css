@@ -1,0 +1,47 @@
+.oompaResumeContent {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 50px;
+}
+
+.oompaImage {
+  flex: 0 1 60%;
+  max-width: 60%;
+}
+
+.oompaResumeInfo {
+  flex: 1;
+}
+
+.oompaResumeInfo h2 {
+  font-size: 20px;
+}
+
+.oompaResumeInfoHeader {
+  margin-bottom: 20px;
+}
+
+.oompaResumeInfoHeader p {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .oompaResumeContent {
+    margin-top: 0;
+    flex-direction: column;
+    gap: 0;
+    height: auto;
+  }
+
+  .oompaImage {
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .oompaResumeInfo {
+    margin-top: 1rem;
+  }
+}
