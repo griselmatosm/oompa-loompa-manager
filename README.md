@@ -69,4 +69,10 @@ Este enfoque me permitió concentrarme en la lógica de la aplicación mientras 
 
 ## Mejoras Futuras
 
-- Considerar la transición a Screaming Architecture si el proyecto crece en complejidad.
+- **Arquitectura**: Considerar la transición a Screaming Architecture si el proyecto crece en complejidad.
+- **Persistencia de Datos y Caching**
+Un requerimiento importante era garantizar que la lista de Oompa Loompas solo se obtuviera si había pasado más de un día desde la última solicitud. Debido a limitaciones de tiempo, esta funcionalidad no se implementó completamente. Actualmente, la lista de Oompa Loompas se almacena en el estado global y se obtiene de nuevo en cada visita.
+
+En un futuro, se planea implementar un sistema de cacheado más robusto utilizando localStorage o una estrategia de caching más eficiente que permitirá persistir la lista y realizar una nueva solicitud solo cuando sea necesario (más de 24 horas desde la última actualización).
+
+
