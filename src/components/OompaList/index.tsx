@@ -42,7 +42,7 @@ export default function OompaList() {
       </ul>
 
       {hasMorePages && (
-        <button onClick={() => setSize(size + 1)} disabled={isLoading}>
+        <button style={{ marginTop: '2rem' }} onClick={() => setSize(size + 1)} disabled={isLoading}>
           {isLoading ? 'Loading...' : 'Load More'}
         </button>
       )}
