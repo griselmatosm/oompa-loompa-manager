@@ -8,7 +8,7 @@ interface OompaCardProps {
 export default function OompaCard({ name, image, gender, profession }: OompaCardProps) {
   return (
     <div className={styles.oompaCard}>
-      <img src={image} alt={name} />
+      <img src={image} alt={`Picture of ${name}`} title={`Picture of ${name}`} />
       <h2>{name}</h2>
       <p>{gender}</p>
       <p>{profession}</p>

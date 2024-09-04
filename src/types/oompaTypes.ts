@@ -11,9 +11,10 @@ export interface OompaList {
 }
 
 export interface OompaWorker {
+  id: number;
   first_name: string;
   last_name: string;
-  favorite: Favorite;
+  favorite?: Favorite;
   gender: Gender;
   image: string;
   profession: string;
@@ -21,7 +22,11 @@ export interface OompaWorker {
   age: number;
   country: Country;
   height: number;
-  id: number;
+}
+
+export interface OompaDetail extends OompaWorker {
+  description: string;
+  quota: string;
 }
 
 export enum Country {
@@ -29,7 +34,7 @@ export enum Country {
 }
 
 export interface Favorite {
-  color: Color;
+  color?: Color;
   food: Food;
   random_string: string;
   song: string;
@@ -54,5 +59,3 @@ export const GenderLabel = {
   [Gender.F]: 'Female',
   [Gender.M]: 'Male',
 };
-
-
