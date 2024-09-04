@@ -1,13 +1,19 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import OompaResume from '../components/OompaResume';
 import { useOompaDetail } from '../hooks/useOompaDetail';
+import { useOompaListActions } from '../hooks/useOompaListActions';
 import { GenderLabel } from '../types/oompaTypes';
 
 
 export default function OompaDetail() {
   const { id } = useParams();
   const { oompaDetail } = useOompaDetail(Number(id));
-  console.log('oompaDetail en el componente', oompaDetail);
+  const { setFilterTermAction } = useOompaListActions();
+
+  useEffect(() => {
+    setFilterTermAction('');
+  }, [setFilterTermAction]);
 
   return (
     oompaDetail ?
